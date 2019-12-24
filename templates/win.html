@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Játék vége
+{% endblock %}
+
+{% block main %}
+    <h1> Gratulálunk {{ név }}, nyertél / nyertetek!</h1><br><br>
+    <h6> Kérlek add / adjátok meg a telefonszámotokat, hogy felvehessük veletek a kapcsolatot, ha Ti nyertek!</h6><br><br>
+    <form action="/sql" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="telefonszám" placeholder="Telefonszám" type="text">
+        </div>
+        <br><br>
+        <button class="btn btn-primary" type="submit">Elküldés</button>
+{% endblock %}

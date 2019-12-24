@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Eddigi kitöltők
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Név</th>
+                <th scope="col">Kitöltés</th>
+                <th scope="col">Szint</th>
+                <th scope="col">Telefonszám</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in result %}
+            <tr>
+                <td>{{ element['játékos'] }}</td>
+                <td>{{ element['date'] }}</td>
+                <td>{{ element['szint'] }}</td>
+                <td>{{ element['telo'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

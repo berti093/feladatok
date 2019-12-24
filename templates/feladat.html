@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ hányadik }}. feladat
+{% endblock %}
+
+{% block main %}
+    <h1> {{ név }}, a(z) {{ hányadik }}. feladatod:</h1><br>
+    <h5> {{ feladat }} </h5><br><br>
+    <img src="{{ kepf }}"><br><br>
+    <form action="/jutalom" method="post">
+        <button class="btn btn-primary" type="submit" name="gomb" value="tovább">Kiérdemeltem a jutalmam >></button><br><br>
+        <button class="btn btn-primary" type="submit" name="gomb" value="vege">Megállok :(</button>
+    </form><br><br>
+{% endblock %}
